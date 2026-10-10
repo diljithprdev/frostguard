@@ -82,8 +82,6 @@ FROSTGUARD_TCP_PORT=8081
 FROSTGUARD_OFFLINE_AFTER=10
 ```
 
-Never commit real `.env` or `backend/frostguard.db*` — both are gitignored.
-
 ## Notes
 
 - Full loop: firmware → TCP/HTTP ingest → SQLite → WebSocket fan-out → web + mobile
