@@ -1,8 +1,8 @@
-# FrostGuard ❄️ — Freezer Door Monitor (ESP32 + FastAPI + Web + Android)
+# FrostGuard — Freezer Door Monitor (ESP32 + FastAPI + Web + Android)
 
-Real-time freezer door monitor that alerts before food spoils. ESP32 sensor → Python FastAPI backend → Live Web dashboard + Android app via WebSocket.
+Freezer door monitor. ESP32 sensor reports to a FastAPI backend, live dashboard and Android app update over WebSocket.
 
-**Stack:** ESP32 (C++) · FastAPI · SQLite · WebSocket · Vanilla JS frontend · Kotlin Android
+Stack: ESP32 (C++), FastAPI, SQLite, WebSocket, vanilla JS, Kotlin Android
 
 ## What it does
 
@@ -82,11 +82,11 @@ FROSTGUARD_TCP_PORT=8081
 FROSTGUARD_OFFLINE_AFTER=10
 ```
 
-## Notes
+## Design
 
-- Full loop: firmware → TCP/HTTP ingest → SQLite → WebSocket fan-out → web + mobile
-- Dedupe by event_id, offline detection, config versioning for flaky WiFi
-- Minimal industrial UI, no extra deps on the ESP32 side
+- Firmware posts over TCP, HTTP fallback on disconnect
+- Events deduped by event_id, offline threshold in config
+- ESP32 pulls threshold and buzzer settings with config version
 
 ## Roadmap
 
