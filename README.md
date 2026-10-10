@@ -1,5 +1,7 @@
 # FrostGuard — Freezer Door Monitor (ESP32 + FastAPI + Web + Android)
 
+<img src="docs/icon-512.png" width="96" alt="FrostGuard icon">
+
 Freezer door monitor. ESP32 sensor reports to a FastAPI backend, live dashboard and Android app update over WebSocket.
 
 Stack: ESP32 (C++), FastAPI, SQLite, WebSocket, vanilla JS, Kotlin Android
