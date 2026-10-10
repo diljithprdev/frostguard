@@ -84,11 +84,11 @@ FROSTGUARD_OFFLINE_AFTER=10
 
 Never commit real `.env` or `backend/frostguard.db*` — both are gitignored.
 
-## What I learned / why hire me
+## Notes
 
-- Full IoT loop: firmware → TCP/HTTP ingest → SQLite → WebSocket fan-out → web + mobile
-- Dedupe + offline detection + config versioning for unreliable devices
-- Sharp, minimal industrial UI under real-time constraints
+- Full loop: firmware → TCP/HTTP ingest → SQLite → WebSocket fan-out → web + mobile
+- Dedupe by event_id, offline detection, config versioning for flaky WiFi
+- Minimal industrial UI, no extra deps on the ESP32 side
 
 ## Roadmap
 
