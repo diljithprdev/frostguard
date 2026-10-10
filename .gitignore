@@ -1,0 +1,42 @@
+# Python
+venv/
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+*.egg-info/
+
+# Env & secrets - NEVER commit real .env
+.env
+*.env.local
+
+# Runtime DB - NEVER commit
+backend/frostguard.db*
+*.db
+*.db-wal
+*.db-shm
+
+# Logs
+*.log
+logs/
+
+# Android / Gradle
+android/.gradle/
+android/build/
+android/app/build/
+android/local.properties
+android/*.log
+android/captures/
+.gradle/
+local.properties
+
+# Firmware build
+firmware/build/
+*.bin
+*.elf
+*.hex
+
+# OS
+.DS_Store
+Thumbs.db

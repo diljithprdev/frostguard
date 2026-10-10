@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FROSTGUARD — Live</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-mark">❄</span>
+    <div>
+      <h1>FROSTGUARD</h1>
+      <p>Smart Freezer Door Monitoring — Live Pipeline Test</p>
+    </div>
+  </div>
+  <div class="conn">
+    <span id="wsDot" class="dot dot-off"></span>
+    <span id="wsLabel">connecting…</span>
+  </div>
+</header>
+
+<main>
+  <section class="cards">
+    <div class="card">
+      <span class="label">Door state</span>
+      <span id="doorState" class="big">—</span>
+    </div>
+    <div class="card">
+      <span class="label">Open for</span>
+      <span id="elapsed" class="big">0 s</span>
+    </div>
+    <div class="card">
+      <span class="label">Device</span>
+      <span id="deviceId" class="big small-text">no data</span>
+      <span id="lastSeen" class="sub">last message: —</span>
+    </div>
+    <div class="card">
+      <span class="label">Alarm</span>
+      <span id="alarm" class="big">—</span>
+    </div>
+  </section>
+
+  <section class="panel">
+    <div class="panel-head">
+      <h2>Raw message stream</h2>
+      <span id="msgCount" class="sub">0 messages</span>
+    </div>
+    <div id="log" class="log"></div>
+  </section>
+</main>
+
+<footer>
+  <span>HTTP :8000 · TCP device port :8081 · WS <code>/ws/live</code></span>
+</footer>
+
+<script src="js/app.js"></script>
+</body>
+</html>
